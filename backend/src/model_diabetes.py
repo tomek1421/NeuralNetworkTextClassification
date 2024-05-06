@@ -15,7 +15,7 @@ class ModelDiabetes:
     def __init__(self):
         print("[INFO] init")
 
-        self.df = pd.read_csv("diabetes.csv")
+        self.df = pd.read_csv("../data/diabetes.csv")
         self.X = self.df[self.df.columns[:-1]].values
         self.y = self.df[self.df.columns[-1]].values
 
