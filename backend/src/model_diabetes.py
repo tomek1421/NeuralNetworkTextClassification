@@ -6,6 +6,10 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
 
+from sklearn.naive_bayes import GaussianNB
+from sklearn import tree
+import matplotlib.pyplot as plt
+
 class ModelDiabetes:
 
     def __init__(self):
@@ -28,6 +32,14 @@ class ModelDiabetes:
     def createMLP(self, layers=(6,3), iterations=3000, solver="adam", activation="identity", learning_rate_init=0.01, learning_rate="constant", alpha=0.01):
         print("[INFO] create MLPClassifier")
         self.model = MLPClassifier(hidden_layer_sizes=layers, max_iter=iterations, solver=solver, activation=activation, learning_rate_init=learning_rate_init, learning_rate=learning_rate, alpha=alpha)
+
+
+    def createGaussianNB(self):
+        self.model = GaussianNB()
+
+
+    def createDecisionTree(self):
+        self.model = tree.DecisionTreeClassifier()
 
 
     def train(self):
