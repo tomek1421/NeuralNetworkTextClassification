@@ -361,3 +361,77 @@ nav ul li:hover:after {
     animation: apper 1s;
 }
 
+.model-description {
+    /* border: 1px solid; */
+    width: 32rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: justify;
+    line-height: 2rem;
+    position: relative;
+    animation: apper 1s;
+}
+
+.input-container {
+    position: relative;
+    height: 15rem;
+    width: 15rem;
+    margin: 0.5rem;
+}
+
+.input-container input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+}
+
+.input-container .radio-tile {
+    border: 3px solid var(--second-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.input-container label {
+    /* border: 1px solid; */
+    color: var(--second-color);
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+input:checked + .radio-tile {
+    background-color: var(--second-color);
+}
+
+input:checked + .radio-tile label {
+    color: white;
+}
+
+.radio-tile .radio-desc {
+    /* border: 1px solid; */
+    color: var(--second-color);
+    text-align: center;
+    width: 80%;
+    transition: all 0.3s;
+}
+
+input:checked + .radio-tile .radio-desc {
+    color: white;
+}
+
+.arrow-icon {
+    height: 4rem;
+}
+
+h2 {
+    /* border: 1px solid; */
+    font-size: 2rem;
+    margin: 1rem 0rem;
+}
