@@ -1,0 +1,7 @@
+numpy
+pandas
+matplotlib
+imblearn
+flask
+marshmallow
+flask-cors
