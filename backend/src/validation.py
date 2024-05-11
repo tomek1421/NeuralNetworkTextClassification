@@ -50,7 +50,7 @@ class CheckDiabetes(Schema):
         ]
     ) # 0-70 Body mass index (weight in kg/(height in m)2)
     
-    diabetes = fields.Float(
+    diabetes_function = fields.Float(
         required=True,
         validate=[
             validate.Range(min=0, error="Diabetes pedigree function must be greater than or equal 0"),
@@ -65,3 +65,32 @@ class CheckDiabetes(Schema):
             validate.Range(max=100, error="Age must be less than or equal 100")
         ]
     )
+
+class TeslModel(Schema):
+    algorithm = fields.String(
+        required=True,
+        validate=Regexp(r'\b(mlp|gnb|dt)\b', error="Invalid algorithm. Must be one of 'mlp', 'gnb', or 'dt'.")
+    )
+    layers = fields.List(
+        fields.Integer(
+            validate=validate.Range(min=1, max=100, error="Each neuron must be an integer between 1 and 100."),
+        ),
+        required=True,
+        error="Layers must be provided as a list of integers (neurons)."
+    )
+    iterations = fields.Integer(
+        required=True,
+        validate=[
+            validate.Range(min=0, error="Iterations must be a non-negative integer."),
+            validate.Range(max=10000, error="Iterations must be less than or equal to 10000.") 
+        ]
+    )
+    solver = fields.String(
+        required=True,
+        validate=Regexp(r'\b(adam|lbfgs|sgd)\b', error="Invalid solver. Must be one of 'adam', 'lbfgs', or 'sgd'.")
+    )
+    activation = fields.String(
+        required=True,
+        validate=Regexp(r'\b(identity|logistic|relu|tanh)\b', error="Invalid activation. Must be one of 'identity', 'logistic', 'relu', or 'tanh'.")
+    )
+
