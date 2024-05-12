@@ -433,5 +433,129 @@ input:checked + .radio-tile .radio-desc {
 h2 {
     /* border: 1px solid; */
     font-size: 2rem;
-    margin: 1rem 0rem;
+    margin-bottom: 1rem;
+}
+
+.layer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.layer-content {
+    display: flex;
+    gap: 0.25rem;
+    font-size: 1.5rem;
+    color: white;
+    position: relative;
+    animation: apper 1s;
+}
+
+.neurons-header {
+    text-transform: uppercase;
+    background-color: var(--second-color);
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.neurons-buttons {
+    display: flex;
+    background-color: var(--second-color);
+}
+
+.minus-plus-btn {
+    /* border: 1px solid; */
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.minus-plus-btn:hover {
+    background-color: #ee6211;
+}
+
+.neurons-value {
+    /* border: 1px solid; */
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layers-input {
+    /* border: 1px solid; */
+    width: 40rem;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.add-layer {
+    margin-top: 1rem;
+    width: 100%;
+    background-color: var(--thrid-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.add-layer:hover {
+    background-color: #eebc00;
+}
+
+.layer-header {
+    /* border-right: 2px dashed;
+    border-left: 2px dashed; */
+    font-size: 1.5rem;
+    position: relative;
+    padding: 0 1rem;
+    animation: apper 1s;
+}
+
+.layer-header:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    /* transform: translateY(-50%); */
+    width: 18rem;
+    height: 2px;
+    border-top: 2px dashed;
+}
+
+.layer-header:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    /* transform: translateY(-50%); */
+    width: 18rem;
+    height: 2px;
+    border-top: 2px dashed;
+}
+
+.remove-btn {
+    /* border: 1px solid; */
+    width: 4rem;
+    height: 4rem;
+    background-color: #FF6C45;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background-color: #FF4D1E;
 }
