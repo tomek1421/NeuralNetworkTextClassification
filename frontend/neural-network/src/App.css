@@ -214,7 +214,7 @@ nav ul li:hover:after {
 }
 
 .slider-value-box {
-    background-color: var(--second-color);
+    background-color: var(--first-color);
     color: white;
     width: 5rem;
     height: 2rem;
@@ -390,7 +390,7 @@ nav ul li:hover:after {
 }
 
 .input-container .radio-tile {
-    border: 3px solid var(--second-color);
+    border: 3px solid var(--first-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -401,13 +401,13 @@ nav ul li:hover:after {
 
 .input-container label {
     /* border: 1px solid; */
-    color: var(--second-color);
+    color: var(--first-color);
     font-size: 1.5rem;
     padding: 1rem 0;
 }
 
 input:checked + .radio-tile {
-    background-color: var(--second-color);
+    background-color: var(--first-color);
 }
 
 input:checked + .radio-tile label {
@@ -416,10 +416,13 @@ input:checked + .radio-tile label {
 
 .radio-tile .radio-desc {
     /* border: 1px solid; */
-    color: var(--second-color);
+    color: var(--first-color);
     text-align: center;
     width: 80%;
     transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 input:checked + .radio-tile .radio-desc {
@@ -429,11 +432,11 @@ input:checked + .radio-tile .radio-desc {
 .arrow-icon-box {
     display: flex;
     justify-content: center;
-    margin: 2rem 0;
+    margin: 4rem 0;
 }
 
 .arrow-icon {
-    height: 4rem;
+    height: 2rem;
 }
 
 h2 {
@@ -461,7 +464,7 @@ h2 {
 
 .neurons-header {
     text-transform: uppercase;
-    background-color: var(--second-color);
+    background-color: var(--first-color);
     padding: 0 2rem;
     display: flex;
     justify-content: center;
@@ -470,7 +473,7 @@ h2 {
 
 .neurons-buttons {
     display: flex;
-    background-color: var(--second-color);
+    background-color: var(--first-color);
 }
 
 .minus-plus-btn {
@@ -577,4 +580,51 @@ h2 {
     display: flex;
     justify-content: center;
     transition: all 1s;
+}
+
+.radio-desc img {
+    height: 10rem;
+}
+
+.input-container-activation {
+    height: 16rem;
+}
+
+.img-identity {
+    position: relative;
+    left: 3px;
+    background-image: url('icons/identityGraphOrange.png');
+    background-size: 10rem;
+    height: 10rem;
+    width: 10rem;
+}
+
+.input-container-activation input:checked + .radio-tile .img-identity {
+    background-image: url('icons/identityGraphWhite.png');
+}
+
+.img-relu {
+    position: relative;
+    left: 2px;
+    background-image: url('icons/reluGraphOrange.png');
+    background-size: 10rem;
+    height: 10rem;
+    width: 10rem;
+}
+
+.input-container-activation input:checked + .radio-tile .img-relu {
+    background-image: url('icons/reluGraphWhite.png');
+}
+
+.img-logistic {
+    position: relative;
+    left: 2px;
+    background-image: url('icons/logisticGraphOrange.png');
+    background-size: 10rem;
+    height: 10rem;
+    width: 10rem;
+}
+
+.input-container-activation input:checked + .radio-tile .img-logistic {
+    background-image: url('icons/logisticGraphWhite.png');
 }
