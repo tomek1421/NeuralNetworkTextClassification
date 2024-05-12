@@ -7,6 +7,7 @@ import { AlgorithmInput } from "../components/AlgorithmInput"
 import { LayersInput } from "../components/LayersInput"
 import { SolverInput } from "../components/SolverInput"
 import { IterationInput } from "../components/IterationInput"
+import { ActivationInput } from "../components/ActivationInput"
 
 export function Model() {
 
@@ -14,7 +15,8 @@ export function Model() {
         algorithm: "mlp",
         layers: [6, 3],
         solver: "sgd",
-        iterations: 500
+        iterations: 500,
+        activation: "logistic"
     })
 
     function handleChange(event) {
@@ -73,12 +75,24 @@ export function Model() {
                     </div>
                     <IterationInput iterations={data.iterations} handleChange={handleChange} disableStyles={disableStyles} />
                     
+                    <div className="arrow-icon-box">
+                        <img className="arrow-icon" src={arrow} />
+                    </div>
 
+                    <div className={`model-input-header ${disableStyles}`}>
+                        <h2>Activation function</h2>
+                    </div>
+                    <ActivationInput activation={data.activation} handleChange={handleChange} disableStyles={disableStyles} />
+
+                    <div className="arrow-icon-box">
+                        <img className="arrow-icon" src={arrow} />
+                    </div>
                 </form>
                 <div>{data.algorithm}</div>
                 <div>{data.layers}</div>
                 <div>{data.solver}</div>
                 <div>{data.iterations}</div>
+                <div>{data.activation}</div>
             </div>
         </div>
     )
