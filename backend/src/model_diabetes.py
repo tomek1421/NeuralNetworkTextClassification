@@ -57,8 +57,8 @@ class ModelDiabetes:
         print("Training accuracy:", training_accuracy)
         print("Testing accuracy:", test_accuracy)
         return {
-            "training_accuracy": round(training_accuracy, 2),
-            "test_accuracy": round(test_accuracy, 2)
+            "training_accuracy": round(training_accuracy * 100),
+            "test_accuracy": round(test_accuracy * 100)
         }
     
     
@@ -71,3 +71,10 @@ class ModelDiabetes:
         conf_matrix = confusion_matrix(self.y_test, self.test_prediction)
         print(conf_matrix)
         return conf_matrix
+
+    def loss(self):
+        loss = 0
+        if isinstance(self.model, MLPClassifier):
+            loss = self.model.loss_
+        print(loss)
+        return round(loss, 2)

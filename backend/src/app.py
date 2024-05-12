@@ -83,7 +83,8 @@ def accuracy():
 
     accuracy = model_playground.accuracy()
     matrix = model_playground.confusionMatrix()
-    print(matrix)
+    loss = model_playground.loss()
+
     tab = [[
          int(matrix[0][0]),
         int(matrix[0][1])
@@ -95,6 +96,7 @@ def accuracy():
     return {
         "training_accuracy": accuracy["training_accuracy"],
         "test_accuracy": accuracy["test_accuracy"],
+        "loss": loss,
         "matrix": tab
     }, 200
 
