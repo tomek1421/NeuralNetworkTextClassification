@@ -4,11 +4,13 @@ import icon from "../icons/icon2.png"
 import arrows from "../icons/arrows.png"
 import arrow from "../icons/arrow.png"
 import { AlgorithmInput } from "../components/AlgorithmInput"
+import { LayersInput } from "../components/LayersInput"
 
 export function Model() {
 
     const [data, setData] = React.useState({
         algorithm: "",
+        layers: [6, 3]
     })
 
     function handleChange(event) {
@@ -20,6 +22,8 @@ export function Model() {
             }
         })
     }
+
+    const disableStyles = data.algorithm !== "mlp" ? "z-[-1] opacity-50" : ""
 
     return (
         <div>
@@ -36,12 +40,18 @@ export function Model() {
                         <h2>Neural network</h2>
                     </div>
                     <AlgorithmInput algorithm={data.algorithm} handleChange={handleChange} />
-                    <div>{data.algorithm}</div>
+                    {/* <div>{data.algorithm}</div> */}
 
                     <div className="flex justify-center mt-[3rem] mb-[3rem]">
                         <img className="arrow-icon" src={arrow} />
                     </div>
+                    <div className="flex justify-center">
+                        <h2>Layers and neurons</h2>
+                    </div>
+                    <LayersInput data={data} setData={setData} disableStyles={disableStyles} />
                 </form>
+                <div>{data.algorithm}</div>
+                <div>{data.layers}</div>
             </div>
         </div>
     )
