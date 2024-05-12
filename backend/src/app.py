@@ -93,7 +93,8 @@ def accuracy():
     ]]
 
     return {
-        "accuracy": accuracy,
+        "training_accuracy": accuracy["training_accuracy"],
+        "test_accuracy": accuracy["test_accuracy"],
         "matrix": tab
     }, 200
 
