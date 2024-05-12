@@ -53,28 +53,26 @@ export function LayersInput({data, setData, disableStyles}) {
     }
 
     return (
-        <div className="flex justify-center">
-            <div className={`layers-input ${disableStyles}`}>
-                {
-                    data.layers.map((neurons, index) => {
-                        return  (
-                            <div className="layer">
-                                <div className="layer-header">Layer {index+1}</div>
-                                <div className="layer-content">
-                                    <div className="neurons-header" >neurons</div>
-                                    <div className="neurons-buttons">
-                                        <div onClick={() => handleDecreseNeuron(index)} className="minus-plus-btn">-</div>
-                                        <div className="neurons-value">{neurons}</div>
-                                        <div onClick={() => handleIncreaseNeuron(index)} className="minus-plus-btn">+</div>
-                                    </div>
-                                    <div onClick={() => handleRemoveLayer(index)} className="remove-btn">X</div>
+        <div className={`layers-input ${disableStyles}`}>
+            {
+                data.layers.map((neurons, index) => {
+                    return  (
+                        <div className="layer">
+                            <div className="layer-header">Layer {index+1}</div>
+                            <div className="layer-content">
+                                <div className="neurons-header" >neurons</div>
+                                <div className="neurons-buttons">
+                                    <div onClick={() => handleDecreseNeuron(index)} className="minus-plus-btn">-</div>
+                                    <div className="neurons-value">{neurons}</div>
+                                    <div onClick={() => handleIncreaseNeuron(index)} className="minus-plus-btn">+</div>
                                 </div>
+                                <div onClick={() => handleRemoveLayer(index)} className="remove-btn">X</div>
                             </div>
-                        )
-                    })
-                }
-                <div className="add-layer" onClick={handleAddLayer} >+ Add layer</div>
-            </div>
+                        </div>
+                    )
+                })
+            }
+            <div className="add-layer" onClick={handleAddLayer} >+ Add layer</div>
         </div>
     )
 }

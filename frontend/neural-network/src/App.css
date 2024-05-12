@@ -430,8 +430,6 @@ input:checked + .radio-tile .radio-desc {
 }
 
 .arrow-icon-box {
-    display: flex;
-    justify-content: center;
     margin: 4rem 0;
 }
 
@@ -577,8 +575,6 @@ h2 {
 }
 
 .model-input-header {
-    display: flex;
-    justify-content: center;
     transition: all 1s;
 }
 

@@ -42,50 +42,47 @@ export function Model() {
             </div>
             <div>
                 <form>
-                    <div className="flex justify-center">
-                        <h2>Neural network</h2>
-                    </div>
-                    <AlgorithmInput algorithm={data.algorithm} handleChange={handleChange} />
-                    {/* <div>{data.algorithm}</div> */}
+                    <div className="flex flex-col items-center">
+                        <div>
+                            <h2>Neural network</h2>
+                        </div>
+                        <AlgorithmInput algorithm={data.algorithm} handleChange={handleChange} />
 
-                    <div className="arrow-icon-box">
-                        <img className="arrow-icon" src={arrow} />
-                    </div>
+                        <div className="arrow-icon-box">
+                            <img className="arrow-icon" src={arrow} />
+                        </div>
 
-                    <div className={`model-input-header ${disableStyles}`}>
-                        <h2>Layers and neurons</h2>
-                    </div>
-                    <LayersInput data={data} setData={setData} disableStyles={disableStyles} />
+                        <div className={`model-input-header ${disableStyles}`}>
+                            <h2>Layers and neurons</h2>
+                        </div>
+                        <LayersInput data={data} setData={setData} disableStyles={disableStyles} />
 
-                    <div className="arrow-icon-box">
-                        <img className="arrow-icon" src={arrow} />
-                    </div>
+                        <div className="arrow-icon-box">
+                            <img className="arrow-icon" src={arrow} />
+                        </div>
 
-                    <div className={`model-input-header ${disableStyles}`}>
-                        <h2>Solver</h2>
-                    </div>
-                    <SolverInput solver={data.solver} handleChange={handleChange} disableStyles={disableStyles} />
+                        <div className={`model-input-header ${disableStyles}`}>
+                            <h2>Solver</h2>
+                        </div>
+                        <SolverInput solver={data.solver} handleChange={handleChange} disableStyles={disableStyles} />
 
-                    <div className="arrow-icon-box">
-                        <img className="arrow-icon" src={arrow} />
-                    </div>
+                        <div className="arrow-icon-box">
+                            <img className="arrow-icon" src={arrow} />
+                        </div>
 
-                    <div className={`model-input-header ${disableStyles}`}>
-                        <h2>Max iteration</h2>
-                    </div>
-                    <IterationInput iterations={data.iterations} handleChange={handleChange} disableStyles={disableStyles} />
-                    
-                    <div className="arrow-icon-box">
-                        <img className="arrow-icon" src={arrow} />
-                    </div>
+                        <div className={`model-input-header ${disableStyles}`}>
+                            <h2>Max iteration</h2>
+                        </div>
+                        <IterationInput iterations={data.iterations} handleChange={handleChange} disableStyles={disableStyles} />
+                        
+                        <div className="arrow-icon-box">
+                            <img className="arrow-icon" src={arrow} />
+                        </div>
 
-                    <div className={`model-input-header ${disableStyles}`}>
-                        <h2>Activation function</h2>
-                    </div>
-                    <ActivationInput activation={data.activation} handleChange={handleChange} disableStyles={disableStyles} />
-
-                    <div className="arrow-icon-box">
-                        <img className="arrow-icon" src={arrow} />
+                        <div className={`model-input-header ${disableStyles}`}>
+                            <h2>Activation function</h2>
+                        </div>
+                        <ActivationInput activation={data.activation} handleChange={handleChange} disableStyles={disableStyles} />
                     </div>
                 </form>
                 <div>{data.algorithm}</div>
