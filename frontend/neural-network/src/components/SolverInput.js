@@ -14,7 +14,7 @@ export function SolverInput(props) {
                     checked={props.solver === "adam"} 
                 />
                 <div className="radio-tile">
-                    <label for="adam">adam</label>
+                    <label htmlFor="adam">adam</label>
                     <div  className="radio-desc">Adaptive Moment Estimation</div>
                 </div>
             </div>
@@ -29,7 +29,7 @@ export function SolverInput(props) {
                     checked={props.solver === "lbfgs"} 
                 />
                 <div className="radio-tile">
-                    <label for="lbfgs">lbfgs</label>
+                    <label htmlFor="lbfgs">lbfgs</label>
                     <div className="radio-desc">Limited-memory Broyden-Fletcher-Goldfarb-Shanno</div>
                 </div>
             </div>
@@ -44,7 +44,7 @@ export function SolverInput(props) {
                     checked={props.solver === "sgd"} 
                 />
                 <div className="radio-tile">
-                    <label for="sgd">sgd</label>
+                    <label htmlFor="sgd">sgd</label>
                     <div className="radio-desc">Stochastic Gradient Descent</div>
                 </div>
             </div>

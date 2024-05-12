@@ -57,7 +57,7 @@ export function LayersInput({data, setData, disableStyles}) {
             {
                 data.layers.map((neurons, index) => {
                     return  (
-                        <div className="layer">
+                        <div key={index} className="layer">
                             <div className="layer-header">Layer {index+1}</div>
                             <div className="layer-content">
                                 <div className="neurons-header" >neurons</div>

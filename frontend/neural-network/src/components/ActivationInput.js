@@ -17,7 +17,7 @@ export function ActivationInput(props) {
                     checked={props.activation === "identity"} 
                 />
                 <div className="radio-tile">
-                    <label for="identity">identity</label>
+                    <label htmlFor="identity">identity</label>
                     <div className="img-identity"></div>
                 </div>
             </div>
@@ -32,7 +32,7 @@ export function ActivationInput(props) {
                     checked={props.activation === "relu"} 
                 />
                 <div className="radio-tile">
-                    <label for="relu">relu</label>
+                    <label htmlFor="relu">relu</label>
                     <div className="img-relu"></div>
                 </div>
             </div>
@@ -47,7 +47,7 @@ export function ActivationInput(props) {
                     checked={props.activation === "logistic"} 
                 />
                 <div className="radio-tile">
-                    <label for="logistic">logistic</label>
+                    <label htmlFor="logistic">logistic</label>
                     <div className="img-logistic"></div>
                 </div>
             </div>

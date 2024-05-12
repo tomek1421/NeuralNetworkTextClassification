@@ -14,7 +14,7 @@ export function AlgorithmInput(props) {
                     checked={props.algorithm === "mlp"} 
                 />
                 <div className="radio-tile">
-                    <label for="mlp">MLP</label>
+                    <label htmlFor="mlp">MLP</label>
                     <div  className="radio-desc" >A Multi-Layer Perceptron (MLP) is an artificial neural network with layers of interconnected nodes</div>
                 </div>
             </div>
@@ -29,7 +29,7 @@ export function AlgorithmInput(props) {
                     checked={props.algorithm === "gnb"} 
                 />
                 <div className="radio-tile">
-                    <label for="gnb">GaussainNB</label>
+                    <label htmlFor="gnb">GaussainNB</label>
                     <div className="radio-desc" >Gaussian Naive Bay machine learning classification technique that relies on Gaussian distribution.</div>
                 </div>
             </div>
@@ -44,7 +44,7 @@ export function AlgorithmInput(props) {
                     checked={props.algorithm === "dt"} 
                 />
                 <div className="radio-tile">
-                    <label for="dt">Tree</label>
+                    <label htmlFor="dt">Tree</label>
                     <div className="radio-desc" >Decision tree classifier constructs a model by building a tree structure, with each node representing a test</div>
                 </div>
             </div>

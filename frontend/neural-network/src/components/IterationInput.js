@@ -6,7 +6,7 @@ export function IterationInput(props) {
 
     return (
         <div className="flex flex-col items-center">
-            <Box sx={{ width: 400 }} className={props.disableStyles} >
+            <Box sx={{ width: 600 }} className={props.disableStyles} >
                 <Slider
                 name={"iterations"}
                 // valueLabelDisplay="auto"
