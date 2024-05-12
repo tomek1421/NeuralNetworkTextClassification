@@ -426,6 +426,12 @@ input:checked + .radio-tile .radio-desc {
     color: white;
 }
 
+.arrow-icon-box {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
 .arrow-icon {
     height: 4rem;
 }
@@ -558,4 +564,11 @@ h2 {
 
 .remove-btn:hover {
     background-color: #FF4D1E;
+}
+
+.input-container-solver {
+    position: relative;
+    height: 11rem;
+    width: 12rem;
+    margin: 0.5rem;
 }
