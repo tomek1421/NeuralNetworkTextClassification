@@ -6,13 +6,15 @@ import arrow from "../icons/arrow.png"
 import { AlgorithmInput } from "../components/AlgorithmInput"
 import { LayersInput } from "../components/LayersInput"
 import { SolverInput } from "../components/SolverInput"
+import { IterationInput } from "../components/IterationInput"
 
 export function Model() {
 
     const [data, setData] = React.useState({
-        algorithm: "",
+        algorithm: "mlp",
         layers: [6, 3],
-        solver: ""
+        solver: "sgd",
+        iterations: 500
     })
 
     function handleChange(event) {
@@ -48,7 +50,7 @@ export function Model() {
                         <img className="arrow-icon" src={arrow} />
                     </div>
 
-                    <div className="flex justify-center">
+                    <div className={`model-input-header ${disableStyles}`}>
                         <h2>Layers and neurons</h2>
                     </div>
                     <LayersInput data={data} setData={setData} disableStyles={disableStyles} />
@@ -57,16 +59,26 @@ export function Model() {
                         <img className="arrow-icon" src={arrow} />
                     </div>
 
-                    <div className="flex justify-center">
+                    <div className={`model-input-header ${disableStyles}`}>
                         <h2>Solver</h2>
                     </div>
                     <SolverInput solver={data.solver} handleChange={handleChange} disableStyles={disableStyles} />
 
+                    <div className="arrow-icon-box">
+                        <img className="arrow-icon" src={arrow} />
+                    </div>
+
+                    <div className={`model-input-header ${disableStyles}`}>
+                        <h2>Max iteration</h2>
+                    </div>
+                    <IterationInput iterations={data.iterations} handleChange={handleChange} disableStyles={disableStyles} />
+                    
 
                 </form>
                 <div>{data.algorithm}</div>
                 <div>{data.layers}</div>
                 <div>{data.solver}</div>
+                <div>{data.iterations}</div>
             </div>
         </div>
     )

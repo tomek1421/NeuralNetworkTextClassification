@@ -572,3 +572,9 @@ h2 {
     width: 12rem;
     margin: 0.5rem;
 }
+
+.model-input-header {
+    display: flex;
+    justify-content: center;
+    transition: all 1s;
+}
