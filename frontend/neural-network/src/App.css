@@ -485,7 +485,7 @@ h2 {
 }
 
 .minus-plus-btn:hover {
-    background-color: #ee6211;
+    background-color: #e28e06;
 }
 
 .neurons-value {
@@ -623,4 +623,236 @@ h2 {
 
 .input-container-activation input:checked + .radio-tile .img-logistic {
     background-image: url('icons/logisticGraphWhite.png');
+}
+
+.model-result-box {
+    /* background-color: #00BF63; */
+    background-color: var(--first-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14rem;
+    height: 14rem;
+    border-radius: 20px;
+    transition: all 2s;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+.circle {
+    /* background-color: #11D677; */
+    background-color: #ffbd59;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 900;
+    transition: all 2s;
+    position: relative;
+}
+
+.weak-result {
+    background-color: #FF4D1E;
+}
+
+.weak-result-circle {
+    background-color: #FF6C45;
+}
+
+.medium-result {
+    background-color: #FF9C00;
+}
+
+.medium-result-circle {
+    background-color: #ffbd59;
+}
+
+.good-result {
+    background-color: #2dbf00;
+}
+
+.good-result-circle {
+    background-color: #51d828;
+}
+
+.great-result {
+    background-color: #00BF63;
+}
+
+.great-result-circle {
+    background-color: #11D677;
+}
+
+.perfect-result {
+    background-color: #00bfac;
+}
+
+.perfect-result-circle {
+    background-color: #25e4d1;
+}
+
+.bounce1 {
+    animation: bounce 1s infinite;
+}
+
+.bounce2 {
+    animation: bounce 1s infinite 0.3s;
+}
+
+.bounce3 {
+    animation: bounce 1s infinite 0.6s;
+}
+
+.model-result-desc {
+    font-size: 1.5rem;
+}
+
+.model-loss-box {
+    background-color: #ffbd59;
+    border: 10px solid var(--first-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14rem;
+    height: 14rem;
+    border-radius: 20px;
+    transition: all 2s;
+}
+
+.loss {
+    width: 7rem;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 900;
+    transition: all 2s;
+    position: relative;
+}
+
+.matrix {
+    display: grid;
+    grid-template-rows: 10rem 10rem;
+    grid-template-columns: 10rem 10rem;
+    position: relative;
+}
+
+.matrix:before {
+    content: 'true';
+    position: absolute;
+    top: 50%;
+    right: 120%;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.matrix:after {
+    content: 'predicted';
+    position: absolute;
+    top: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.matrix-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.matrix-field:nth-child(1) {
+    background-color: var(--first-color);
+    position: relative;
+}
+
+.matrix-field:nth-child(1):before {
+    content: 'no diabetes';
+    position: absolute;
+    top: 50%;
+    right: 65%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-50%) rotate(-90deg);
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.matrix-field:nth-child(2) {
+    background-color: var(--thrid-color);
+    position: relative;
+}
+
+.matrix-field:nth-child(3) {
+    background-color: var(--thrid-color);
+    position: relative;
+}
+
+.matrix-field:nth-child(3):before {
+    content: 'diabetes';
+    position: absolute;
+    top: 50%;
+    right: 65%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-50%) rotate(-90deg);
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.matrix-field:nth-child(3):after {
+    content: 'no diabetes';
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.matrix-field:nth-child(4) {
+    background-color: var(--first-color);
+    position: relative;
+}
+
+.matrix-field:nth-child(4):before {
+    content: 'diabetes';
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 400;
+    white-space: nowrap;
 }
