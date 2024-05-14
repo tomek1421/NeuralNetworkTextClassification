@@ -93,22 +93,3 @@ class TeslModel(Schema):
         required=True,
         validate=Regexp(r'\b(identity|logistic|relu|tanh)\b', error="Invalid activation. Must be one of 'identity', 'logistic', 'relu', or 'tanh'.")
     )
-    
-    # learning_rate_init = fields.Float(
-    #     required=True,
-    #     validate=[
-    #         validate.Range(min=0.0001, error="Learning rate init must be greater than or equal to 0.0001."),
-    #         validate.Range(max=0.1, error="Learning rate init must be less than or equal to 0.1.")
-    #     ]
-    # )
-    # learning_rate = fields.String(
-    #     required=True,
-    #     validate=Regexp(r'\b(adaptive|constant|invscaling)\b', error="Invalid learning rate. Must be one of 'adaptive', 'constant', or 'invscaling'.")
-    # )
-    # alpha = fields.Float(
-    #     required=True,
-    #     validate=[
-    #         validate.Range(min=0.0001, error="Alpha must be greater than or equal to 0.0001."),
-    #         validate.Range(max=0.1, error="Alpha must be less than or equal to 0.1.")
-    #     ]
-    # )
