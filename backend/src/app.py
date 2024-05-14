@@ -11,7 +11,8 @@ CORS(app)
 
 # initialize diabetes model
 model_diabetes = ModelDiabetes()
-model_diabetes.createMLP(layers=(8,8,8,8,3), iterations=10000, solver="lbfgs", activation="relu", learning_rate_init=0.001, learning_rate="adaptive", alpha=0.01)
+# model_diabetes.createMLP(layers=(8,8,8,8,3), iterations=10000, solver="lbfgs", activation="relu", learning_rate_init=0.001, learning_rate="adaptive", alpha=0.01)
+model_diabetes.loadMLP()
 model_diabetes.train()
 model_diabetes.accuracy()
 
@@ -64,9 +65,6 @@ def accuracy():
             iterations = req['iterations']
             solver = req['solver']
             activation = req['activation']
-            # learning_rate_init = req['learning_rate_init']
-            # learning_rate = req['learning_rate']
-            # alpha = req['alpha']
 
             layers = tuple_parse(layers)
             print(layers)

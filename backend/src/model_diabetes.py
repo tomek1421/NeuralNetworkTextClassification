@@ -9,6 +9,7 @@ from sklearn.metrics import confusion_matrix
 from sklearn.naive_bayes import GaussianNB
 from sklearn import tree
 import matplotlib.pyplot as plt
+import joblib
 
 class ModelDiabetes:
 
@@ -26,13 +27,15 @@ class ModelDiabetes:
         self.X, self.y = over.fit_resample(self.X, self.y)
 
         print("[INFO] prepare")
-        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(self.X, self.y, test_size=0.3, random_state=285774)
+        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(self.X, self.y, test_size=0.3, random_state=0)
 
 
     def createMLP(self, layers=(6, 3), iterations=3000, solver="adam", activation="identity", learning_rate_init=0.01, learning_rate="constant", alpha=0.01):
         print("[INFO] create MLPClassifier")
         self.model = MLPClassifier(hidden_layer_sizes=layers, max_iter=iterations, solver=solver, activation=activation, learning_rate_init=learning_rate_init, learning_rate=learning_rate, alpha=alpha)
 
+    def loadMLP(self):
+        self.model = joblib.load('mlp_model.pkl')
 
     def createGaussianNB(self):
         print("[INFO] create GaussianNB")
