@@ -27,7 +27,7 @@ export function Header(props) {
                         <div className="model-description" >{props.description}</div>
                     }
                 </div>
-                <Link to="/diabetes" ><button className="btn">{btnContent}</button></Link>
+                {props.home && <Link to="/diabetes" ><button className="btn">{btnContent}</button></Link> }
             </div>
             <img className={iconStyles} src={props.icon} />
         </div>

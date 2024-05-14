@@ -106,12 +106,6 @@ export function Diabetes() {
               <div className="result-text">{resultData.result}</div>
             }
           </div>
-          {/* {
-            resultData.result !== "" && 
-            <div className="diabetes-warning" >
-              However, for accurate diagnosis, it's recommended to consult a medical professional.
-            </div>
-          } */}
         </div>
       </div>
   )
