@@ -10,7 +10,6 @@ export function Layout() {
                     <ul className="navbar">
                         <li><NavLink to="/" >Home</NavLink></li>
                         <li><NavLink to="/diabetes" >Diabetes</NavLink></li>
-                        <li><NavLink to="/heart" >Heart</NavLink></li>
                         <li><NavLink to="/model" >Model</NavLink></li>
                     </ul>
                 </nav>
