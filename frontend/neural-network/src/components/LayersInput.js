@@ -52,6 +52,11 @@ export function LayersInput({data, setData, disableStyles}) {
         })
     }
 
+    function handleRange(index) {
+        if (data.layers[index] > 1) return true
+        return false
+    }
+
     return (
         <div className={`layers-input ${disableStyles}`}>
             {
@@ -62,7 +67,12 @@ export function LayersInput({data, setData, disableStyles}) {
                             <div className="layer-content">
                                 <div className="neurons-header" >neurons</div>
                                 <div className="neurons-buttons">
-                                    <div onClick={() => handleDecreseNeuron(index)} className="minus-plus-btn">-</div>
+                                    {
+                                        handleRange(index) ? 
+                                        <div onClick={() => handleDecreseNeuron(index)} className="minus-plus-btn">-</div>
+                                        :
+                                        <div className="neurons-value"></div>
+                                    }
                                     <div className="neurons-value">{neurons}</div>
                                     <div onClick={() => handleIncreaseNeuron(index)} className="minus-plus-btn">+</div>
                                 </div>
